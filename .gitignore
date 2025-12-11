@@ -1,0 +1,49 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Build
+public/
+dist/
+build/
+
+# IDEs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Backups
+backup/
+*.backup
+
+# Logs
+*.log
+npm-debug.log*
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# Environment variables
+.env
+.env.local
+
+# Drafts e versões antigas
+design/versoes-antigas/
+docs/rascunhos/
+
+# Arquivos pesados não versionados
+src/assets/videos/*.mp4
+src/assets/videos/*.mov
+*.psd
+*.ai
+
+# Mantém estrutura de pastas vazias
+!**/.gitkeep
