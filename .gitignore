@@ -40,8 +40,6 @@ design/versoes-antigas/
 docs/rascunhos/
 
 # Arquivos pesados não versionados
-src/assets/videos/*.mp4
-src/assets/videos/*.mov
 *.psd
 *.ai
 
