@@ -1,0 +1,11 @@
+# Forçar finais de linha LF para a maior parte dos arquivos de texto
+* text=auto eol=lf
+
+# Alguns tipos de arquivo que devem manter LF mesmo no Windows
+*.svg text eol=lf
+*.md  text eol=lf
+*.yaml text eol=lf
+*.yml  text eol=lf
+*.json text eol=lf
+*.toml text eol=lf
+*.ini  text eol=lf

@@ -47,3 +47,5 @@ src/assets/videos/*.mov
 
 # Mantém estrutura de pastas vazias
 !**/.gitkeep
+
+.gitattributes

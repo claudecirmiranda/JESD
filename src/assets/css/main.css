@@ -1,0 +1,309 @@
+ /* ==========================================================================
+   VARIÁVEIS CSS - O Biscoito de Polvilho®
+   ========================================================================== */
+
+   /* ==========================================================================
+  FONTES PERSONALIZADAS - O Biscoito de Polvilho®
+  ========================================================================== */
+
+/* Importação de fontes personalizadas */
+@font-face {
+font-family: 'Barriecito';
+src: url('/assets/fonts/custom/Barriecito-Regular.woff2') format('woff2'),
+url('/assets/fonts/custom/Barriecito-Regular.woff') format('woff'),
+url('/assets/fonts/custom/Barriecito-Regular.ttf') format('truetype');
+font-weight: 400;
+font-style: normal;
+font-display: swap;
+}
+
+@font-face {
+font-family: 'Rubik';
+src: url('/assets/fonts/custom/Rubik-Regular.woff2') format('woff2'),
+url('/assets/fonts/custom/Rubik-Regular.woff') format('woff'),
+url('/assets/fonts/custom/Rubik-Regular.ttf') format('truetype');
+font-weight: 400;
+font-style: normal;
+font-display: swap;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+:root {
+  /* Cores da Marca */
+  --color-primary: #EB6209;        /* Laranja */
+  --color-secondary: #70200F;      /* Marrom */
+  --color-accent: #F9DB9E;         /* Creme Claro */
+  --color-dark: #6B190E;           /* Textos escuros */
+  --color-gray: #666666;           /* Textos secundários */
+  --color-light-gray: #F5F5F5;     /* Backgrounds */
+  --color-white: #FFFFFF;
+  
+  /* Gradientes */
+  --gradient-primary: linear-gradient(135deg, #FF8C42 0%, #FF6B35 100%);
+  --gradient-warm: linear-gradient(180deg, #FFF8E7 0%, #FFFFFF 100%);
+  
+  /* Tipografia */
+  
+  /*
+  --font-primary: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-secondary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  */
+
+  --font-primary: 'Barriecito', serif; /* Títulos */
+  --font-secondary: 'Rubik', sans-serif; /* Parágrafos (texto) */
+  --font-button: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; /* Botões */
+
+  /* Tamanhos de Fonte */
+  --font-xs: 0.75rem;      /* 12px */
+  --font-sm: 0.875rem;     /* 14px */
+  --font-base: 1rem;       /* 16px */
+  --font-lg: 1.125rem;     /* 18px */
+  --font-xl: 1.25rem;      /* 20px */
+  --font-2xl: 1.5rem;      /* 24px */
+  --font-3xl: 1.875rem;    /* 30px */
+  --font-4xl: 2.25rem;     /* 36px */
+  --font-5xl: 3rem;        /* 48px */
+  --font-6xl: 3.75rem;     /* 60px */
+  
+  /* Espaçamentos */
+  --space-xs: 0.25rem;     /* 4px */
+  --space-sm: 0.5rem;      /* 8px */
+  --space-md: 1rem;        /* 16px */
+  --space-lg: 1.5rem;      /* 24px */
+  --space-xl: 2rem;        /* 32px */
+  --space-2xl: 3rem;       /* 48px */
+  --space-3xl: 4rem;       /* 64px */
+  --space-4xl: 6rem;       /* 96px */
+  
+  /* Bordas */
+  --radius-sm: 0.25rem;    /* 4px */
+  --radius-md: 0.5rem;     /* 8px */
+  --radius-lg: 1rem;       /* 16px */
+  --radius-xl: 1.5rem;     /* 24px */
+  --radius-full: 9999px;
+  
+  /* Sombras */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  --shadow-warm: 0 10px 30px rgba(255, 140, 66, 0.2);
+  
+  /* Transições */
+  --transition-fast: 150ms ease;
+  --transition-base: 300ms ease;
+  --transition-slow: 500ms ease;
+  
+  /* Larguras do Container */
+  --container-sm: 640px;
+  --container-md: 768px;
+  --container-lg: 1024px;
+  --container-xl: 1280px;
+  --container-2xl: 1536px;
+  
+  /* Z-index */
+  --z-base: 1;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-fixed: 300;
+  --z-modal: 400;
+  --z-tooltip: 500;
+}
+
+/* ==========================================================================
+   UTILITÁRIOS GLOBAIS
+   ========================================================================== */
+
+.container {
+  width: 100%;
+  max-width: var(--container-xl);
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+.container-lg {
+  max-width: var(--container-2xl);
+}
+
+.container-sm {
+  max-width: var(--container-lg);
+}
+
+/* Botões */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  padding: var(--space-md) var(--space-xl);
+  font-family: var(--font-secondary);
+  font-weight: 600;
+  font-size: var(--font-base);
+  border-radius: var(--radius-full);
+  transition: all var(--transition-base);
+  cursor: pointer;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background: var(--gradient-primary);
+  color: var(--color-white);
+  box-shadow: var(--shadow-warm);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 35px rgba(255, 140, 66, 0.3);
+}
+
+.btn-secondary {
+  background: var(--color-white);
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+.btn-secondary:hover {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+.btn-lg {
+  padding: var(--space-lg) var(--space-2xl);
+  font-size: var(--font-lg);
+}
+
+/* Seções */
+.section {
+  padding: var(--space-4xl) 0;
+}
+
+.section-sm {
+  padding: var(--space-3xl) 0;
+}
+
+.section-lg {
+  padding: var(--space-4xl) 0;
+  min-height: 100vh;
+}
+
+/* Títulos de Seção */
+.section-title {
+  font-family: var(--font-primary);
+  font-size: var(--font-4xl);
+  font-weight: 700;
+  color: var(--color-dark);
+  text-align: center;
+  margin-bottom: var(--space-md);
+}
+
+.section-subtitle {
+  font-family: var(--font-secondary);
+  font-size: var(--font-lg);
+  color: var(--color-gray);
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto var(--space-3xl);
+}
+
+/* Cards */
+.card {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-base);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-xl);
+}
+
+/* Grid System */
+.grid {
+  display: grid;
+  gap: var(--space-xl);
+}
+
+.grid-2 {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.grid-3 {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.grid-4 {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+/* Utilitários de Texto */
+.text-center {
+  text-align: center;
+}
+
+.text-primary {
+  color: var(--color-primary);
+}
+
+.text-secondary {
+  color: var(--color-secondary);
+}
+
+.text-gradient {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Marcador ® */
+.registered {
+  font-size: 0.6em;
+  vertical-align: super;
+  margin-left: 2px;
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  :root {
+    --font-3xl: 1.5rem;     /* 24px */
+    --font-4xl: 1.875rem;   /* 30px */
+    --font-5xl: 2.25rem;    /* 36px */
+    --font-6xl: 2.5rem;     /* 40px */
+    --space-4xl: 3rem;      /* 48px */
+  }
+  
+  .section-title {
+    font-size: var(--font-3xl);
+  }
+  
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 var(--space-sm);
+  }
+  
+  .btn {
+    padding: var(--space-sm) var(--space-lg);
+    font-size: var(--font-sm);
+  }
+  
+  .btn-lg {
+    padding: var(--space-md) var(--space-xl);
+    font-size: var(--font-base);
+  }
+}
