@@ -6,6 +6,10 @@
 // ========== INICIALIZAÇÃO ==========
 document.addEventListener('DOMContentLoaded', function() {
   console.log('🍪 O Biscoito de Polvilho® - Site carregado!');
+
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js');
+  }  
   
   // Inicializar funções
   initScrollHeader();
@@ -14,6 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Log de analytics (se necessário)
   logPageView();
+
 });
 
 // ========== SCROLL HEADER ==========
