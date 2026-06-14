@@ -166,7 +166,7 @@ function showFormMessage(form, type, message) {
 
 // ========== ENVIO VIA WHATSAPP ==========
 function sendViaWhatsApp(data, tipo) {
-  const phone = '5531955510220';
+  const phone = '5531995551022';
   let message = '';
   
   if (tipo === 'orcamento') {

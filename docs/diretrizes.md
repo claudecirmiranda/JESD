@@ -223,7 +223,7 @@ Hospedagem: Netlify ou Vercel (gratuito)
 **✅ WhatsApp Business:**
 ```
 // Link direto com mensagem pré-preenchida
-https://wa.me/5531955510220?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20O%20Biscoito%20de%20Polvilho®
+https://wa.me/5531995551022?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20O%20Biscoito%20de%20Polvilho®
 ```
 
 ✅ **Instagram:**
