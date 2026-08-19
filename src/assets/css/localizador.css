@@ -1,0 +1,185 @@
+/* ==========================================================================
+   LOCALIZADOR DE UNIDADES - usa as variáveis de main.css
+   ========================================================================== */
+
+.localizador-busca {
+  background: var(--color-white);
+  padding: var(--space-2xl);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  margin-bottom: var(--space-2xl);
+}
+
+.localizador-busca__group {
+  margin-bottom: 0;
+}
+
+.localizador-busca__row {
+  display: flex;
+  gap: var(--space-md);
+}
+
+.localizador-busca__row .form-input {
+  flex: 1;
+}
+
+.localizador-busca__botao {
+  flex-shrink: 0;
+}
+
+.localizador-erro {
+  margin: var(--space-md) 0 0;
+  color: #E74C3C;
+  font-family: var(--font-secondary);
+  font-size: var(--font-sm);
+  font-weight: 600;
+}
+
+/* ---- Carregando ---- */
+
+.localizador-carregando {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-3xl) 0;
+  color: var(--color-gray);
+  font-family: var(--font-secondary);
+  font-size: var(--font-sm);
+}
+
+.localizador-carregando[hidden] {
+  display: none;
+}
+
+.localizador-carregando__spinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid var(--color-light-gray);
+  border-top-color: var(--color-primary);
+  border-radius: 50%;
+  animation: localizador-girar 0.8s linear infinite;
+}
+
+@keyframes localizador-girar {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .localizador-carregando__spinner {
+    animation: none;
+  }
+}
+
+/* ---- Resultados ---- */
+
+.localizador-resultados__titulo {
+  font-family: var(--font-primary);
+  font-size: var(--font-2xl);
+  font-weight: 700;
+  color: var(--color-dark);
+  margin-bottom: var(--space-lg);
+}
+
+.localizador-resultados__lista {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.localizador-card {
+  display: flex;
+  gap: var(--space-md);
+  align-items: center;
+}
+
+.localizador-card__logo {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-md);
+  object-fit: cover;
+  background: var(--color-light-gray);
+  flex-shrink: 0;
+}
+
+.localizador-card__info {
+  flex: 1;
+  min-width: 0;
+}
+
+.localizador-card__nome {
+  font-family: var(--font-secondary);
+  font-size: var(--font-lg);
+  font-weight: 700;
+  color: var(--color-dark);
+  margin: 0 0 var(--space-xs);
+}
+
+.localizador-card__endereco {
+  font-family: var(--font-secondary);
+  font-size: var(--font-sm);
+  color: var(--color-gray);
+  margin: 0 0 var(--space-sm);
+}
+
+.localizador-card__trajeto {
+  font-family: var(--font-secondary);
+  font-size: var(--font-sm);
+  font-weight: 600;
+  color: var(--color-primary);
+  margin: 0 0 var(--space-md);
+}
+
+.localizador-card__cta {
+  display: inline-block;
+  padding: var(--space-sm) var(--space-lg);
+  border-radius: var(--radius-full);
+  background: var(--gradient-primary);
+  color: var(--color-white);
+  font-family: var(--font-button);
+  font-size: var(--font-sm);
+  font-weight: 600;
+  text-decoration: none;
+  transition: all var(--transition-base);
+}
+
+.localizador-card__cta:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-warm);
+}
+
+/* ---- Estado vazio ---- */
+
+.localizador-vazio {
+  text-align: center;
+  padding: var(--space-3xl) var(--space-xl);
+  background: var(--gradient-warm);
+  border-radius: var(--radius-lg);
+  font-family: var(--font-secondary);
+  color: var(--color-dark);
+}
+
+.localizador-vazio__sub {
+  color: var(--color-gray);
+  margin: var(--space-sm) 0 var(--space-lg);
+}
+
+/* ---- Responsivo ---- */
+
+@media (max-width: 480px) {
+  .localizador-busca {
+    padding: var(--space-lg);
+  }
+
+  .localizador-busca__row {
+    flex-direction: column;
+  }
+
+  .localizador-card {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+}
