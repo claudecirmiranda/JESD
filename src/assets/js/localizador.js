@@ -1,9 +1,6 @@
 (function () {
-  // IMPORTANTE: aponte para onde a API do localizador (projeto cep-estabelecimentos)
-  // está hospedada. Deixe vazio ('') se este site e a API estiverem no MESMO domínio
-  // (ex: reverse proxy no Nginx apontando /api para o backend Node).
-  // Caso contrário, use a URL completa, ex: 'https://localizador.obiscoito.com.br'
-  const API_BASE_URL = '';
+  // URL da API do localizador (backend na VPS, via Traefik).
+  const API_BASE_URL = 'https://geo.soaone.com.br';
 
   const form = document.getElementById('formBusca');
   const inputCep = document.getElementById('cep');
