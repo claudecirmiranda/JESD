@@ -1,0 +1,55 @@
+/* ==========================================================================
+   LINK EM DESTAQUE - página links.html
+   Reaproveita as variáveis já existentes em main.css (--gradient-primary
+   é a mesma cor do botão "Como chegar" do localizador).
+   ========================================================================== */
+
+.link-item.featured {
+  background: var(--gradient-primary);
+  color: var(--color-white);
+  border: 2px solid transparent;
+  padding: 1.5rem 1.5rem;
+  box-shadow: var(--shadow-warm), 0 0 0 4px rgba(255, 140, 66, 0.15);
+  position: relative;
+  animation: featured-pulse 2.5s ease-in-out infinite;
+}
+
+.link-item.featured .link-icon,
+.link-item.featured .link-arrow {
+  color: var(--color-white);
+}
+
+.link-item.featured .link-text {
+  font-weight: 700;
+}
+
+.link-item.featured .link-badge {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  opacity: 0.9;
+  margin-top: 2px;
+}
+
+.link-item.featured:hover {
+  transform: translateY(-3px) scale(1.02);
+  border-color: transparent;
+  box-shadow: var(--shadow-warm), 0 0 0 6px rgba(255, 140, 66, 0.25);
+}
+
+@keyframes featured-pulse {
+  0%, 100% {
+    box-shadow: var(--shadow-warm), 0 0 0 4px rgba(255, 140, 66, 0.15);
+  }
+  50% {
+    box-shadow: var(--shadow-warm), 0 0 0 8px rgba(255, 140, 66, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .link-item.featured {
+    animation: none;
+  }
+}
