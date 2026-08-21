@@ -1,4 +1,4 @@
-const CACHE_NAME = 'jesd-v2'; // 1. Mude a versão sempre que fizer alterações críticas
+const CACHE_NAME = 'jesd-v3'; // 1. Mude a versão sempre que fizer alterações críticas
 const ASSETS = [
   '/',
   '/index.html',
