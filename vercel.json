@@ -25,7 +25,9 @@
     { "source": "/produto", "destination": "/produto.html" },
     { "source": "/portfolio", "destination": "/portfolio.html" },
     { "source": "/depoimentos", "destination": "/depoimentos.html" },
-    { "source": "/contato", "destination": "/contato.html" },
+    { "source": "/contto", "destination": "/contato.html" },
+    { "source": "/ondeencontrar", "destination": "/ondeencontrar.html" },
+    { "source": "/onde", "destination": "/ondeencontrar.html" },
     { "source": "/orcamento", "destination": "/orcamento.html" }
   ]
 }
