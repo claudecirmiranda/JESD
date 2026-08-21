@@ -162,44 +162,5 @@
   <script src="assets/js/menu.js"></script>
   <script src="assets/js/animations.js"></script>
   <script src="assets/js/localizador.js"></script>
-<script>
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js').then((reg) => {
-      
-      // Função que deleta os caches locais e recarrega a página
-      const forcarLimpezaERefresh = () => {
-        if ('caches' in window) {
-          caches.keys().then((names) => {
-            // Deleta absolutamente todas as storages de cache antigas
-            return Promise.all(names.map(name => caches.delete(name)));
-          }).then(() => {
-            // Recarrega a página trazendo o HTML limpo da Vercel
-            window.location.reload(true);
-          });
-        } else {
-          window.location.reload(true);
-        }
-      };
-
-      // 1. Se já houver um Service Worker novo aguardando na fila
-      if (reg.waiting) {
-        forcarLimpezaERefresh();
-      }
-
-      // 2. Se um novo Service Worker for encontrado e instalado enquanto o usuário navega
-      reg.addEventListener('updatefound', () => {
-        const newWorker = reg.installing;
-        newWorker.addEventListener('statechange', () => {
-          if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
-            // O novo SW terminou de instalar. Limpa o cache e atualiza a tela.
-            forcarLimpezaERefresh();
-          }
-        });
-      });
-
-    });
-  }
-</script>
-
 </body>
 </html>
