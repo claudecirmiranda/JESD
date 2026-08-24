@@ -8,7 +8,7 @@ const ASSETS_TO_CACHE = [
   "/portfolio.html",
   "/depoimentos.html",
   "/contato.html",
-  "/orcamento.html",
+  "/todas-as-lojas.html",
   "/assets/css/reset.css",
   "/assets/css/main.css",
   "/assets/css/components.css",

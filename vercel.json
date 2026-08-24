@@ -28,6 +28,6 @@
     { "source": "/contto", "destination": "/contato.html" },
     { "source": "/ondeencontrar", "destination": "/ondeencontrar.html" },
     { "source": "/onde", "destination": "/ondeencontrar.html" },
-    { "source": "/orcamento", "destination": "/orcamento.html" }
+    { "source": "/lojas", "destination": "/todas-as-lojas.html" }
   ]
 }
