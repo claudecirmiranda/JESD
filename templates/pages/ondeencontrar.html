@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Encontre a unidade de O Biscoito de Polvilho® mais próxima de você. Digite seu CEP e veja distância, tempo de deslocamento e como chegar.">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://obiscoito.com.br/onde">
+  <meta property="og:title" content="O Biscoito de Polvilho® - Tradição não se perde, se reinventa">
+  <meta property="og:description" content="O primeiro biscoito de polvilho congelado do Brasil. Pronto em 3 minutos na air fryer!">
+  <meta property="og:image" content="https://obiscoito.com.br/assets/images/og-image.jpg">
+
+  <link rel="icon" type="image/x-icon" href="assets/images/logo/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/localizador.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#8B5E3C">
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="O Biscoito de Polvilho">
+
+  <link rel="apple-touch-icon" href="assets/images/logo/pwa-192.png">
+
+  <title>Onde Encontrar - O Biscoito de Polvilho®</title>
+</head>
+<body>
+
+  <!--@include:header-->
+
+  <section class="hero-interno">
+    <div class="container">
+      <div class="hero-interno__content" data-aos="fade-up">
+        <h1 class="hero-interno__title">Onde Encontrar</h1>
+        <p class="hero-interno__subtitle">Digite seu CEP e descubra a unidade mais próxima de você!</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container container-sm">
+
+      <div class="localizador-busca" data-aos="fade-up">
+        <form id="formBusca" class="form" autocomplete="off">
+          <div class="form-group localizador-busca__group">
+            <label for="cep" class="form-label">Seu CEP</label>
+            <div class="localizador-busca__row">
+              <input
+                type="text"
+                id="cep"
+                name="cep"
+                class="form-input"
+                placeholder="00000-000"
+                inputmode="numeric"
+                maxlength="9"
+              >
+              <button type="submit" class="btn btn-primary localizador-busca__botao">
+                Buscar
+              </button>
+            </div>
+          </div>
+        </form>
+        <p id="mensagemErro" class="localizador-erro" hidden></p>
+      </div>
+
+      <div id="carregando" class="localizador-carregando" hidden>
+        <div class="localizador-carregando__spinner" aria-hidden="true"></div>
+        <p>Calculando as unidades mais próximas…</p>
+      </div>
+
+      <div id="resultadosSecao" class="localizador-resultados" hidden data-aos="fade-up">
+        <h2 class="localizador-resultados__titulo">
+          Unidades próximas de <span id="resultadosCepRef"></span>
+        </h2>
+        <div id="listaResultados" class="localizador-resultados__lista"></div>
+      </div>
+
+      <div id="estadoVazio" class="localizador-vazio" hidden>
+        <p>Nenhuma unidade encontrada perto desse CEP ainda.</p>
+        <p class="localizador-vazio__sub">Que tal falar direto com a gente pelo WhatsApp?</p>
+        <a href="https://wa.me/5531995551022" class="btn btn-secondary" target="_blank">Falar no WhatsApp</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!--@include:footer-->
+
+  <!--@include:whatsapp-float-->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/menu.js"></script>
+  <script src="assets/js/animations.js"></script>
+  <script src="assets/js/localizador.js"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Veja no mapa todas as unidades de O Biscoito de Polvilho® em Belo Horizonte e região.">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://obiscoito.com.br/lojas">
+  <meta property="og:title" content="O Biscoito de Polvilho® - Tradição não se perde, se reinventa">
+  <meta property="og:description" content="O primeiro biscoito de polvilho congelado do Brasil. Pronto em 3 minutos na air fryer!">
+  <meta property="og:image" content="https://obiscoito.com.br/assets/images/og-image.jpg">
+
+  <link rel="icon" type="image/x-icon" href="assets/images/logo/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/mapa-lojas.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#8B5E3C">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="O Biscoito de Polvilho">
+  <link rel="apple-touch-icon" href="assets/images/logo/pwa-192.png">
+
+  <title>Nossas Lojas - O Biscoito de Polvilho®</title>
+</head>
+<body>
+
+  <!--@include:header-->
+
+  <section class="hero-interno">
+    <div class="container">
+      <div class="hero-interno__content" data-aos="fade-up">
+        <h1 class="hero-interno__title">Nossas Lojas</h1>
+        <p class="hero-interno__subtitle">Todas as unidades onde você encontra O Biscoito de Polvilho®</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+
+      <div class="mapa-lojas__contador" id="mapaContador"></div>
+
+      <div id="mapa" class="mapa-lojas__mapa" aria-label="Mapa com a localização das lojas"></div>
+
+      <p id="mapaErro" class="mapa-lojas__erro" hidden>
+        Não foi possível carregar as lojas no mapa. Tente novamente mais tarde.
+      </p>
+
+      <div class="mapa-lojas__cta">
+        <p>Prefere ver só as unidades mais perto de você?</p>
+        <a href="onde" class="btn btn-primary">Buscar por CEP</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!--@include:footer-->
+
+  <!--@include:whatsapp-float-->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/menu.js"></script>
+  <script src="assets/js/mapa-lojas.js"></script>
+</body>
+</html>

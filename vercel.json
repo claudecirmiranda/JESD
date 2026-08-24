@@ -25,7 +25,7 @@
     { "source": "/produto", "destination": "/produto.html" },
     { "source": "/portfolio", "destination": "/portfolio.html" },
     { "source": "/depoimentos", "destination": "/depoimentos.html" },
-    { "source": "/contto", "destination": "/contato.html" },
+    { "source": "/contato", "destination": "/contato.html" },
     { "source": "/ondeencontrar", "destination": "/ondeencontrar.html" },
     { "source": "/onde", "destination": "/ondeencontrar.html" },
     { "source": "/lojas", "destination": "/todas-as-lojas.html" }
