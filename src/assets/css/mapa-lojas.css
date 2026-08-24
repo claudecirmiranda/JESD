@@ -50,12 +50,29 @@
   min-width: 200px;
 }
 
+.mapa-lojas__popup-topo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.mapa-lojas__popup-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  background: var(--color-light-gray);
+  border: 2px solid var(--color-primary);
+}
+
 .mapa-lojas__popup-nome {
   font-family: var(--font-primary);
   font-size: var(--font-base);
   font-weight: 700;
   color: var(--color-dark);
-  margin: 0 0 4px;
+  margin: 0;
 }
 
 .mapa-lojas__popup-endereco {

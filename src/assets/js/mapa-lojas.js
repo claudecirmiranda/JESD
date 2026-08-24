@@ -54,7 +54,15 @@
 
         marcador.bindPopup(`
           <div class="mapa-lojas__popup">
-            <p class="mapa-lojas__popup-nome">${escaparHtml(loja.apelido)}</p>
+            <div class="mapa-lojas__popup-topo">
+              <img
+                class="mapa-lojas__popup-logo"
+                src="${escaparAtributo(loja.logo || 'assets/images/logo/logo.svg')}"
+                alt="${escaparHtml(loja.apelido)}"
+                onerror="this.onerror=null;this.src='assets/images/logo/logo.svg';"
+              >
+              <p class="mapa-lojas__popup-nome">${escaparHtml(loja.apelido)}</p>
+            </div>
             <p class="mapa-lojas__popup-endereco">${escaparHtml(loja.endereco || '')}</p>
             <a class="mapa-lojas__popup-cta" href="${escaparAtributo(loja.maps_url)}" target="_blank" rel="noopener">
               Como chegar
