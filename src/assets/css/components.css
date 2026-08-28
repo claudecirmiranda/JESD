@@ -1800,12 +1800,16 @@
   color: var(--color-primary);
 }
 
-.footer__address {
+.footer__address-link {
+  display: inline-block;
   font-family: var(--font-secondary);
   font-size: var(--font-base);
   color: rgba(255, 255, 255, 0.8);
-  line-height: 1.8;
-  font-style: normal;
+  transition: color var(--transition-base);
+}
+
+.footer__address-link:hover {
+  color: var(--color-primary);
 }
 
 .footer__bottom {
